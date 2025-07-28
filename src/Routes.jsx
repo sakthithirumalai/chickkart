@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
-import ScrollToTop from "components/ScrollToTop";
-import ErrorBoundary from "components/ErrorBoundary";
-import CartStateManager from "components/ui/CartStateManager";
+import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
+import CartStateManager from "./components/ui/CartStateManager";
 // Add your imports here
-import AdminLogin from "pages/admin-login";
-import UpiPaymentConfirmation from "pages/upi-payment-confirmation";
-import ShoppingCartCheckout from "pages/shopping-cart-checkout";
-import CustomerMenuBrowse from "pages/customer-menu-browse";
-import AdminDashboardOrderManagement from "pages/admin-dashboard-order-management";
-import NotFound from "pages/NotFound";
+import AdminLogin from "./pages/admin-login";
+import UpiPaymentConfirmation from "./pages/upi-payment-confirmation";
+import ShoppingCartCheckout from "./pages/shopping-cart-checkout";
+import CustomerMenuBrowse from "./pages/customer-menu-browse";
+import AdminDashboardOrderManagement from "./pages/admin-dashboard-order-management";
+import NotFound from "./pages/NotFound";
 
 const Routes = () => {
   return (
