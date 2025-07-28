@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #FAFAFA; /* warm neutral */
+    --color-foreground: #1A1A1A; /* high-contrast dark gray */
+    --color-border: #E5E7EB; /* light gray */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #FF6B35; /* appetite-stimulating orange */
+    
+    /* Card & Surface Colors */
+    --color-card: #FFFFFF; /* clean white */
+    --color-card-foreground: #1A1A1A; /* high-contrast dark gray */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1A1A1A; /* high-contrast dark gray */
+    
+    /* Muted Colors */
+    --color-muted: #F3F4F6; /* light gray */
+    --color-muted-foreground: #6B7280; /* medium gray */
+    
+    /* Brand Colors */
+    --color-primary: #FF6B35; /* appetite-stimulating orange */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #2E86AB; /* trust-building blue */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #F7931E; /* energetic highlight */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-success: #10B981; /* fresh green */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F59E0B; /* attention-grabbing amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #EF4444; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #EF4444; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  body, p, span, div {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-food-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-food-modal {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .hover-lift {
+    transition: all 150ms ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-1px);
+    opacity: 0.8;
+  }
+  
+  .scale-feedback {
+    transition: transform 150ms ease-out;
+  }
+  
+  .scale-feedback:active {
+    transform: scale(1.02);
+  }
+}
